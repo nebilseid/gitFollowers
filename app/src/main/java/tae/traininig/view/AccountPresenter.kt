@@ -5,8 +5,8 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import tae.traininig.model.network.GitAccountService
 
-class AccountPresenter(
-    private val gitAccountService: GitAccountService, private val view: AccountContract.View) : AccountContract.Presenter
+class AccountPresenter(private val gitAccountService: GitAccountService,
+                       private val view: AccountContract.View) : AccountContract.Presenter
  {
      private val compositeDisposable = CompositeDisposable()
 

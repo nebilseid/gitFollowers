@@ -13,7 +13,7 @@ class GitAccountViewModel(private val getGitAccoutUseCase: GetAccoutUseCase) : B
     private val loadingLiveData = MutableLiveData<Boolean>()
 
 
-    private fun getWishListApi() {
+    private fun getAccountUseCase() {
         getGitAccoutUseCase.execute()
             .doOnSubscribe { loadingLiveData.value = true }
             .doOnEvent { _, _ -> loadingLiveData.value = false }

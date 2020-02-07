@@ -4,29 +4,35 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import dagger.Provides
 import kotlinx.android.synthetic.main.activity_main.*
-import tae.traininig.App
-import tae.traininig.R
 import tae.traininig.model.data.GitAccounts
-import tae.traininig.view.di.AccountModule
 import javax.inject.Inject
 
-class MainActivity(private val accountAdapter: GitAccountAdapter) : AppCompatActivity(), AccountContract.View {
+
+class MainActivity : AppCompatActivity(), AccountContract.View{
 
 
     @Inject
     lateinit var accountPresenter: AccountPresenter
+    private val accountAdapter = GitAccountAdapter()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(tae.traininig.R.layout.activity_main)
 
-        DaggerAccountComponent.builder()
+
+
+
+
+/*
+       DaggerAppComponent.builder()
             .appComponent((application as App).getComponent())
             .accountModule(AccountModule(this))
             .build()
             .inject(this)
+
+            */
 
 
 

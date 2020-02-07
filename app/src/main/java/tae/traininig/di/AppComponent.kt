@@ -1,7 +1,6 @@
 package tae.traininig.di
 
 import dagger.Component
-import tae.traininig.di.NetworkModule
 import tae.traininig.model.network.GitAccountService
 import javax.inject.Singleton
 
@@ -10,7 +9,7 @@ import javax.inject.Singleton
 
 @Singleton
 interface AppComponent {
-    fun getAccount(): GitAccountService
+    fun gitAccountService(): GitAccountService
 
 }
 

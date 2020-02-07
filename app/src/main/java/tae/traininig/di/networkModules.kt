@@ -38,5 +38,5 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRecipeService(retrofit: Retrofit) = retrofit.create(GitAccountService::class.java)
+    fun provideAccountService(retrofit: Retrofit) = retrofit.create(GitAccountService::class.java)!!
 }
