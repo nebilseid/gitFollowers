@@ -1,8 +1,8 @@
 package tae.traininig.model.data.repository
 
 import io.reactivex.Single
-import tae.traininig.model.data.DataGitRepositories
+import tae.traininig.model.data.DataGitAccountResponse
 
 interface GitAccountRepository {
-    fun getGitAccount(): Single<DataGitRepositories>
+    fun getGitAccount(): Single<DataGitAccountResponse>
 }

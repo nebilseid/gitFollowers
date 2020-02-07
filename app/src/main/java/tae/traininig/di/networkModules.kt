@@ -1,4 +1,4 @@
-package tae.traininig.model.di
+package tae.traininig.di
 
 import dagger.Module
 import dagger.Provides
@@ -7,7 +7,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import tae.traininig.model.network.GitAccount
+import tae.traininig.model.network.GitAccountService
 import javax.inject.Singleton
 
 @Module
@@ -38,5 +38,5 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRecipeService(retrofit: Retrofit) = retrofit.create(GitAccount::class.java)
+    fun provideRecipeService(retrofit: Retrofit) = retrofit.create(GitAccountService::class.java)
 }

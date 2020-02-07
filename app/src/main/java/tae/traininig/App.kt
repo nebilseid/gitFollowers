@@ -1,8 +1,9 @@
 package tae.traininig
 
 import android.app.Application
-import tae.traininig.model.di.AppComponent
-import tae.traininig.model.di.DaggerAppComponent
+import tae.traininig.di.AppComponent
+import tae.traininig.di.DaggerAppComponent
+
 
 class App: Application(){
     private lateinit var appComponent: AppComponent

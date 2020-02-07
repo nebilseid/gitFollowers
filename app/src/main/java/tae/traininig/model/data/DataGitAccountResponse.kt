@@ -1,6 +1,6 @@
 package tae.traininig.model.data
 
-data class DataGitRepositories(val accounts: List<GitAccounts>)
+data class DataGitAccountResponse(val accounts: List<GitAccounts>)
 
 data class GitAccounts(
 
