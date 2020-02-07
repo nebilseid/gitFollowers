@@ -30,23 +30,6 @@ class MainActivity(private val accountAdapter: GitAccountAdapter) : AppCompatAct
 
 
 
-
-        /*   DaggerAppComponent.builder()
-               .appComponent((application as App).getComponent())
-               .recipeModule(AccoutModule(this))
-               .build()
-
-           DaggerRecipeComponent.builder()
-               .appComponent((application as App).getComponent())
-               .recipeModule(RecipeModule(this))
-               .build()
-               .inject(this)
-
-
-
-               .inject(this)*/
-
-
         rv_git_account.layoutManager = LinearLayoutManager(this)
         rv_git_account.adapter = accountAdapter
 
